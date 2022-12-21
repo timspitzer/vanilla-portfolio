@@ -6,8 +6,7 @@ let alreadyRemoved = JSON.parse(localStorage.getItem("alreadyRemoved"));
 const timeNow = new Date().getTime();
 const timeRemoved = JSON.parse(localStorage.getItem("timestampRemoved"));
 if (timeRemoved) {
-  // const waitTime = 1000 * 60 * 60 * 24 * 7;
-  const waitTime = 5000;
+  const waitTime = 1000 * 60 * 60 * 24 * 7;
   console.log("delay", timeNow - timeRemoved > waitTime);
   if (timeNow - timeRemoved > waitTime) {
     alreadyRemoved = false;
