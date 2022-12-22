@@ -1,9 +1,11 @@
 let alreadyRemoved = JSON.parse(sessionStorage.getItem("alreadyRemoved"));
-const element = document.querySelector(".overlay");
+const overlay = document.querySelector(".overlay");
+const introText = document.querySelector("#short-intro-text");
 
 if (alreadyRemoved) {
-  element.remove();
+  overlay.remove();
   document.body.classList.remove("disable-scroll");
+  introText.classList.remove("color-white");
 }
 
 if (!alreadyRemoved) {
@@ -15,8 +17,9 @@ function addRemoveBackgroundListener() {
     "click",
     (e) => {
       e.preventDefault();
-      element.classList.remove("background-effect");
+      overlay.classList.remove("background-effect");
       document.body.classList.remove("disable-scroll");
+      introText.classList.remove("color-white");
       sessionStorage.setItem("alreadyRemoved", JSON.stringify(true));
     },
     { once: true }
