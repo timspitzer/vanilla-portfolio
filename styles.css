@@ -53,14 +53,19 @@ nav > ul {
 
 nav > ul > li {
   display: inline-block;
-}
-
-nav > ul > li > a {
   padding: 0 0.3rem;
 }
 
-nav > ul > li > a:hover {
-  border-bottom: 1px solid #000;
+nav > ul > li:hover a {
+  background-size: 100% 1px;
+}
+
+nav > ul > li > a {
+  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
+  background-size: 0% 1px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s ease;
 }
 
 footer {
