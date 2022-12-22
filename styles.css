@@ -36,8 +36,8 @@ body {
 
 header > a {
   font-family: "Courier New", Courier, monospace;
-  letter-spacing: -3px;
-  font-size: 2rem;
+  letter-spacing: -2px;
+  font-size: 1.5rem;
 }
 
 nav {
@@ -52,11 +52,11 @@ nav > ul {
 }
 
 nav > ul > li {
-  display: inline;
+  display: inline-block;
 }
 
 nav > ul > li > a {
-  padding: 0.3rem;
+  padding: 0 0.3rem;
 }
 
 nav > ul > li > a:hover {
