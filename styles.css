@@ -16,6 +16,8 @@ body {
   --color-4: #009c95;
   --color-5: #007184;
   --color-6: #2f4858;
+  --mouse-x: 0;
+  --mouse-y: 0;
 }
 
 .content {
@@ -128,9 +130,9 @@ h6 {
   background-position: 0% 0%;
 }
 
-html:hover .background-effect {
+/* html:hover .background-effect {
   background-position: -3% -3%;
-}
+} */
 
 .overlay {
   width: 100%;
@@ -140,7 +142,9 @@ html:hover .background-effect {
   left: 0;
   z-index: 1;
   pointer-events: none;
-  transition: background-color 400ms ease, background-position 400ms ease;
+  transition: background-color 400ms ease, transform 100ms ease;
+  transform: perspective(600px) rotateX(var(--mouse-x)) rotateY(var(--mouse-y))
+    scale(1.5);
 }
 
 .over-overlay {
