@@ -128,11 +128,9 @@ h6 {
   background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%), #000;
   background-size: 1.5rem 1.5rem;
   background-position: 0% 0%;
+  transform: perspective(600px) rotateX(var(--mouse-y)) rotateY(var(--mouse-x))
+    scale(1.2);
 }
-
-/* html:hover .background-effect {
-  background-position: -3% -3%;
-} */
 
 .overlay {
   width: 100%;
@@ -143,8 +141,6 @@ h6 {
   z-index: 1;
   pointer-events: none;
   transition: background-color 400ms ease, transform 100ms ease;
-  transform: perspective(600px) rotateX(var(--mouse-x)) rotateY(var(--mouse-y))
-    scale(1.5);
 }
 
 .over-overlay {
