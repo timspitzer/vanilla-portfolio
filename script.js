@@ -10,10 +10,10 @@ if (alreadyRemoved) {
 
 if (!alreadyRemoved) {
   addRemoveBackgroundListener();
-  addMouseTracking();
+  addMouseTrackingListener();
 }
 
-function addMouseTracking() {
+function addMouseTrackingListener() {
   window.addEventListener("mousemove", (e) => {
     const x = Math.round((e.clientX / window.innerWidth - 0.5) * 6) + "deg";
     const y =
