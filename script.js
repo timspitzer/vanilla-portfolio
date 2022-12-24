@@ -18,7 +18,6 @@ function addMouseTracking() {
     const x = Math.round((e.clientX / window.innerWidth - 0.5) * 6) + "deg";
     const y =
       -1 * Math.round((e.clientY / window.innerHeight - 0.5) * 6) + "deg";
-    console.log(x, y);
 
     document.body.style.setProperty("--mouse-x", x);
     document.body.style.setProperty("--mouse-y", y);
