@@ -25,7 +25,7 @@ function addMouseTrackingListener() {
 }
 
 function addRemoveBackgroundListener() {
-  document.body.addEventListener(
+  overlay.addEventListener(
     "click",
     (e) => {
       e.preventDefault();
