@@ -14,14 +14,13 @@ if (!alreadyRemoved) {
 }
 
 function addMouseTrackingListener() {
-
-    document.addEventListener("touchmove", (e) => {
-    const x = Math.round((e.touches[0].clientX / window.innerWidth - 0.5) * 6) + "deg";
+  document.addEventListener("touchmove", (e) => {
+    const x =
+      Math.round((e.touches[0].clientX / window.innerWidth - 0.5) * 6) + "deg";
     const y =
-      -1 * Math.round((e.touches[0].clientY / window.innerHeight - 0.5) * 6) + "deg";
-
-    
-
+      -1 * Math.round((e.touches[0].clientY / window.innerHeight - 0.5) * 6) +
+      "deg";
+  });
 
   window.addEventListener("mousemove", (e) => {
     const x = Math.round((e.clientX / window.innerWidth - 0.5) * 6) + "deg";
@@ -32,8 +31,6 @@ function addMouseTrackingListener() {
     document.body.style.setProperty("--mouse-y", y);
   });
 }
-
-
 
 function addRemoveBackgroundListener() {
   overlay.addEventListener(
