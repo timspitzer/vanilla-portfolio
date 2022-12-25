@@ -20,6 +20,9 @@ function addMouseTrackingListener() {
     const y =
       -1 * Math.round((e.touches[0].clientY / window.innerHeight - 0.5) * 6) +
       "deg";
+
+    document.body.style.setProperty("--mouse-x", x);
+    document.body.style.setProperty("--mouse-y", y);
   });
 
   window.addEventListener("mousemove", (e) => {
