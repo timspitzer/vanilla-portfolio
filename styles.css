@@ -16,8 +16,6 @@ body {
   --color-4: #009c95;
   --color-5: #007184;
   --color-6: #2f4858;
-  --mouse-x: 0;
-  --mouse-y: 0;
 }
 
 .content {
@@ -56,18 +54,6 @@ nav > ul {
 nav > ul > li {
   display: inline-block;
   padding: 0 0.3rem;
-}
-
-nav > ul > li:hover a {
-  background-size: 100% 1px;
-}
-
-nav > ul > li > a {
-  background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 1));
-  background-size: 0% 1px;
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  transition: background-size 0.3s ease;
 }
 
 footer {
@@ -128,8 +114,6 @@ h6 {
   background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%), #000;
   background-size: 1.5rem 1.5rem;
   background-position: 0% 0%;
-  transform: perspective(600px) rotateX(var(--mouse-y)) rotateY(var(--mouse-x))
-    scale(1.2);
 }
 
 .overlay {
@@ -140,7 +124,7 @@ h6 {
   left: 0;
   z-index: 1;
   pointer-events: none;
-  transition: background-color 400ms ease, transform 100ms ease;
+  transition: background-color 400ms ease;
 }
 
 .over-overlay {
@@ -149,10 +133,10 @@ h6 {
 }
 
 .disable-scroll {
-  cursor: pointer;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  cursor: pointer;
 }
 
 /* Index.html specific styles */
