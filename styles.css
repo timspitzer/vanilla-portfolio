@@ -69,6 +69,7 @@ footer > div {
 footer ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 h1 {
@@ -108,6 +109,10 @@ h6 {
 
 .color-white {
   color: #fff;
+}
+
+article {
+  margin-bottom: 5rem;
 }
 
 .background-effect {
