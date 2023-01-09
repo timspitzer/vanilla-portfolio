@@ -17,7 +17,7 @@ function addRemoveBackgroundListener() {
     "click",
     (e) => {
       e.preventDefault();
-      overlay.classList.remove("background-effect");
+      overlay.classList.remove("background");
       document.body.classList.remove("disable-scroll");
       introText.classList.remove("color-white");
       sessionStorage.setItem("alreadyRemoved", JSON.stringify(true));

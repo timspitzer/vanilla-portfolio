@@ -115,11 +115,14 @@ article {
   margin-bottom: 5rem;
 }
 
-.background-effect {
-  position: relative;
+.background {
   background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%), #000;
   background-size: 1.5rem 1.5rem;
   background-position: 0% 0%;
+}
+
+body:hover .background {
+  background-position: -1rem -1rem;
 }
 
 .overlay {
@@ -130,7 +133,7 @@ article {
   left: 0;
   z-index: 1;
   pointer-events: none;
-  transition: background-color 400ms ease;
+  transition: background-color 400ms ease, background-position 400ms ease;
 }
 
 .over-overlay {
