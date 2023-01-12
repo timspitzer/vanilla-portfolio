@@ -1,14 +1,14 @@
-let alreadyRemoved = JSON.parse(sessionStorage.getItem("alreadyRemoved"));
+let isBgRemoved = false;
+// let isBgRemoved = JSON.parse(sessionStorage.getItem("isBgRemoved"));
 const introText = document.querySelector("#short-intro-text");
 const overlay = document.querySelector(".overlay");
 
-if (alreadyRemoved) {
+if (isBgRemoved) {
   overlay.remove();
-  document.body.classList.remove("disable-scroll");
-  introText.classList.remove("color-white");
+  removeUtilityClasses();
 }
 
-if (!alreadyRemoved) {
+if (!isBgRemoved) {
   addRemoveBackgroundListener();
 }
 
@@ -18,10 +18,14 @@ function addRemoveBackgroundListener() {
     (e) => {
       e.preventDefault();
       overlay.classList.remove("background");
-      document.body.classList.remove("disable-scroll");
-      introText.classList.remove("color-white");
-      sessionStorage.setItem("alreadyRemoved", JSON.stringify(true));
+      removeUtilityClasses();
+      sessionStorage.setItem("isBgRemoved", JSON.stringify(true));
     },
     { once: true }
   );
+}
+
+function removeUtilityClasses() {
+  document.body.classList.remove("disable-scroll");
+  introText.classList.remove("col-white");
 }
