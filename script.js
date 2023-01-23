@@ -1,5 +1,4 @@
-let isBgRemoved = false;
-// let isBgRemoved = JSON.parse(sessionStorage.getItem("isBgRemoved"));
+const isBgRemoved = JSON.parse(sessionStorage.getItem("isBgRemoved"));
 const introText = document.querySelector("#short-intro-text");
 const overlay = document.querySelector(".overlay");
 
