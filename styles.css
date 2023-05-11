@@ -76,7 +76,7 @@ nav > ul > li {
 
 article {
   margin-bottom: 5rem;
-  padding: 1rem 1rem;
+  padding: 1rem 0;
   border-radius: 1rem;
   background: #ecedf1;
 }
