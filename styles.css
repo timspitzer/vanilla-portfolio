@@ -80,6 +80,12 @@ article {
   border-radius: 1rem;
   background: #ecedf1;
 }
+/* 
+.project,
+.project-overview,
+.about {
+  padding: 1rem 1rem;
+} */
 
 footer {
   padding: 3rem 0 1rem 0;
