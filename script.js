@@ -12,6 +12,7 @@ if (!isBgRemoved) {
 }
 
 function addRemoveBackgroundListener() {
+  console.log(document.body);
   document.body.addEventListener(
     "click",
     (e) => {
